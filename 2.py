@@ -1,4 +1,7 @@
-b=int(input())
-h=int(input())
-s = float(1/2*b*h)
-print(s)
+a=input().split()
+for i in range(len(a)):
+    a[i]=int(a[i])
+
+for i in range (len(a)):
+    if a[i]%2==0:
+        print(a[i])
