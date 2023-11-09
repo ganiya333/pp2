@@ -1,11 +1,6 @@
-a=input().split()
-for i in range(len(a)):
-    a[i]=int(a[i])
+import re
+with open('row.txt') as file:
+    row = file.read()
 
-for i in range(len(a)-1):
-    if a[i]>0 and a[i+1]>0:
-        print(a[i], a[i+1])
-        break
-    elif a[i]<0 and a[i+1]<0:
-        print(a[i],a[i+1])
-        break
+result = re.findall(r'\b[A-Z][a-z]+\b',row)
+print (result)

@@ -1,7 +1,6 @@
-a=input().split()
-for i in range(len(a)):
-    a[i]=int(a[i])
+import re
+with open('row.txt') as file:
+    row = file.read()
 
-for i in range (len(a)):
-    if a[i]%2==0:
-        print(a[i])
+result = re.findall('ab{2,3}',row)
+print (result)

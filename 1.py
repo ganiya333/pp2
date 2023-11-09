@@ -1,9 +1,6 @@
-a=input().split()
-for i in range(len(a)):
-    a[i]=int(a[i])
+import re
+with open('row.txt') as file:
+    row = file.read()
 
-for i in range(len(a)):
-    if i%2==0:
-        print(a[i])
-    elif i==0:
-        print(a[0])
+result = re.findall('a.*b',row)
+print (result)

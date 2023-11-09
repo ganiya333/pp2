@@ -1,14 +1,6 @@
-a=input().split()
-for i in range(len(a)):
-    a[i]=int(a[i])
+import re
+with open('row.txt') as file:
+    row = file.read()
 
-for i in range (len(a)):
-    if i%2==1:
-       k=a[i]
-       a[i]=a[i-1]
-       a[i-1]=k
-   
-
-    
-for i in range(len(a)):
-    print(a[i])
+result = re.sub(r'([a-z])([A-Z])', r'\1 \2', row)
+print (result)
